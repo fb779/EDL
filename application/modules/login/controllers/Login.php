@@ -12,26 +12,20 @@ class Login extends MX_Controller {
 			'static' => BASE_STATICS,
 			'title' => TITULO_ENCUESTA
 		);
+		$this->datos['footer'] = array();
 	}
 	
 	public function index()
 	{
+		$this->datos['menu'] = array(
+			'navigate' => array(	
+				array('modulo' => 'Directorio1', 'direc' => 'empresas'),
+				array('modulo' => 'Usuarios', 'direc' => 'home'),
+			),	
+		);
 		
-
-		$this->datos['menu'] = array();
-
-
-
-		// $datos['dt'] = array(
-			
-		// 	'navigate' => array(	
-		// 		array('modulo' => 'Directorio1', 'direc' => 'empresas'),
-		// 		array('modulo' => 'Usuarios', 'direc' => 'home'),
-		// 	),
-		// );
-		
-		$this->datos['page'] = 'form_login';
-		$this->datos['dt_page'] = array(
+		$this->datos['template'] = 'form_login';
+		$this->datos['dt'] = array(
 			'url_login' => BASE_URL . 'login',
 			'parrafo' => 'Parrafo de verificacion para la carga de contenido de la pagina..... ',
 		);
