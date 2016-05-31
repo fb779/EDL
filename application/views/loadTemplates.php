@@ -1,5 +1,8 @@
 <?php
-	$this->parser->parse("templates/header.php", $dt);
+	if (isset($header)){
+		$this->parser->parse("templates/header.php", $header);
+	}
+
 	if (isset($dt['navigate'])){
 		$this->parser->parse("templates/navigation.php", $dt);
 	}
