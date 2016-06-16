@@ -316,7 +316,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'HmVc_Ci_C0D31gN1T3R';
+$config['encryption_key'] = '3DL_C0D31gN1T3R';
 
 /*
 |--------------------------------------------------------------------------
@@ -367,6 +367,17 @@ $config['encryption_key'] = 'HmVc_Ci_C0D31gN1T3R';
 |
 | Other session cookie settings are shared with the rest of the application,
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
+|
+|
+| * Estructure the table from ci_sessionss
+|
+|	CREATE TABLE `ci_sessions` (
+|		`id`	TEXT NOT NULL UNIQUE,
+|		`ip_address`	TEXT NOT NULL,
+|		`timestamp`	INTEGER NOT NULL DEFAULT 0,
+|		`data`	BLOB NOT NULL,
+|		PRIMARY KEY(id)
+|	);
 |
 */
 $config['sess_driver'] = 'database';
