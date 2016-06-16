@@ -1,6 +1,8 @@
 <?php
 	if (isset($header)){
 		$this->parser->parse("templates/header.php", $header);
+	} else {
+		$this->parser->parse("templates/header.php", array());
 	}
 
 	if (isset($menu)){
@@ -11,7 +13,11 @@
 		$this->parser->parse($template, $dt);
 	} 
 
-	$this->parser->parse("templates/footer.php", $footer);
+	if (isset($footer)){
+		$this->parser->parse("templates/footer.php", $footer);
+	} else {
+		$this->parser->parse("templates/footer.php", array());
+	}
 
 	// $this->load->view("templates/header.php");
 	// $this->load->view("templates/navigation.php");

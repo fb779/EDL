@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/hmvc_ci/';
+$config['base_url'] = 'http://localhost/EDL/';
+//$config['base_url'] = BASE_URL;
 
 /*
 |--------------------------------------------------------------------------

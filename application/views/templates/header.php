@@ -2,28 +2,25 @@
 <head>
 	<meta charset="utf-8">
 	<title>{title}</title>
-	<!--link rel="stylesheet" type="text/css" href="css/normalizer.css"-->
-	<script src="{static}js/jquery-1.12.3.min.js" type="text/javascript"></script>
-	<script src="{static}js/angular.min.js" type="text/javascript"></script>
-	<script src="{static}js/ETES.js" type="text/javascript"></script>
-
+	
 	<link rel="stylesheet" type="text/css" href="{static}css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{static}css/styles.css">
 	
-
-	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script-->
+	<!--script src="{static}js/jquery-1.12.3.min.js" type="text/javascript"></script>
 	<script src="{static}js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="{static}js/angular.min.js" type="text/javascript"></script>
+	<script src="{static}js/ETES.js" type="text/javascript"></script>
 
 	<!--script src="js/funciones.js" type="text/javascript"></script-->
 	
 </head>
 
-<body ng-app="app_etes">
-	<div class="ap_body conteiner">
+<body>
+	<!--div class="ap_body conteiner">
 	<div class="containe">
 		<div id="header" class="row">
 			<section class="ap_logo text-center">
-				<img class=" media-object" src="{static}img/logo.png" alt="">
+				
 			</section>
 			<section class="ap_text text-right">
 				<articles class="ap_row row">{title}</articles>
@@ -31,4 +28,18 @@
 				<articles class="ap_row row">periodo</articles>
 			</section>
 		</div>
-		<div class="ap_line row"></div>
+		<div class="ap_line row"></div-->
+
+	<!-- Cabecera de la pagina -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-3">
+				<img class="media-object" src="{static}img/logo.png" alt="">
+			</div>
+			<div class="col-xs-8 col-xs-offset-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio molestiae, eius minus error itaque quos necessitatibus. Tempora laborum suscipit obcaecati maxime vero consequatur, eius totam, magni praesentium hic quos dicta!</p>
+			</div>
+		</div>
+		<div class="row">&nbsp;</div>
+	</div>
+	<!-- Fin Cabecera de la pagina -->
