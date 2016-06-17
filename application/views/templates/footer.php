@@ -18,6 +18,6 @@
 	<script src="{static}js/jquery-1.12.3.min.js" type="text/javascript"></script>
 	<script src="{static}js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="{static}js/angular.min.js" type="text/javascript"></script>
-	<script src="{static}js/ETES.js" type="text/javascript"></script>
+	<script src="{static}js/evac_2.js" type="text/javascript"></script>
 </body>
 </html>

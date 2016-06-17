@@ -337,8 +337,24 @@
 							<div class="col-xs-12 col-sm-3 ">
 								<h4 class="text-info">Actividades Económicas </h4>
 							</div>
-							<div class="col-xs-12 col-sm-9 ">
-								<label>Falta agregar el control de campos dinamicos </label>
+							<div class="col-xs-12 col-sm-3">
+								<a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo</a>
+							</div>
+							<div id="contenedor" class="col-xs-12 col-sm-9 ">
+								<div class="form-group added">
+									<input class="form-control" type="text" name="mitexto[]" id="campo_0" placeholder="Texto 1"/><a href="#" class="eliminar">&times;</a>
+								</div>
+
+
+								<div class="input-group">
+									<span class="input-group-btn">
+										<button class="btn btn-default eliminar" type="button">
+											<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+										</button>
+									</span>
+									<input type="text" class="form-control" placeholder="Search for...">
+								</div><!-- /input-group -->
+
 							</div>
 						</div>
 
@@ -421,4 +437,5 @@
 		</div>
 	</div>
 </div>
-	<!-- Fin Contenido de la pagina -->
+<!-- Fin Contenido de la pagina -->
+
