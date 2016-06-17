@@ -10,6 +10,8 @@ class Home extends MX_Controller {
 	);
 	public function __construct() {
 		parent::__construct();
+		// $this->datos['staticos'] = BASE_STATICS;
+		// $this->datos['titulo'] = TITULO_ENCUESTA;
 		$this->datos['header'] = array(
 			'static' => BASE_STATICS,
 			'title' => TITULO_ENCUESTA
@@ -36,6 +38,6 @@ class Home extends MX_Controller {
 			'parrafo' => 'Parrafo de verificacion para la carga de contenido de la pagina ',
 		);
 
-		$this->parser->parse('loadTemplates', $this->datos, TRUE);
+		$this->parser->parse('loadTemplates', $this->datos);
 	}
 }
