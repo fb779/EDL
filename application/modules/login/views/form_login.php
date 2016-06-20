@@ -13,8 +13,9 @@
 			<input type="submit" class="btn btn-default" ng-click="save()" value="jajajajaja" />
 		</div>
 	</form-->
-<div id="content" class="ap_content row text-center" ng-controller="NewUserController">
-<form action="#" method="POST" name="userForm" class="form-horizontal" novalidate>
+<div id="container" class="ap_content row text-center" ng-controller="NewUserController">
+<!-- form action="{form_identificar}" method="POST" name="userForm" class="form-horizontal" novalidate-->
+{form_identificar}
 	<div class="form-group" >
 		<div class="col-md-3"></div>
 		<div class="input-group col-md-6" ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$touched }">
@@ -36,6 +37,12 @@
 		<div class="col-md-3"></div>
 	</div>
 	<button class="btn btn-primary" ng-click="save()">Iniciar Sesion</button>
+	
+	<div class="form-gorup text-center">
+		<div class="col-md-3 col-xs-offset-3">
+		{calendario_g}
+		</div>
+	</div>
 	
 </form>
 </div>
