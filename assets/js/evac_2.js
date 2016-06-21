@@ -1,32 +1,36 @@
 $(document).ready(function() {
-
-    var MaxInputs       = 5; //Número Maximo de Campos
+	
+    var MaxInputs       = 10; //Número Maximo de Campos
     var contenedor       = $("#contenedor"); //ID del contenedor
     var AddButton       = $("#agregarCampo"); //ID del Botón Agregar
 
     //var x = número de campos existentes en el contenedor
-    var x = $("#contenedor div").length + 1;
-    var FieldCount = x-1; //para el seguimiento de los campos
+    var x = $("#contenedor div").length;
+    var FieldCount = x; //para el seguimiento de los campos
 
-    $(AddButton).click(function (e) {
-        if(x <= MaxInputs) //max input box allowed
-        {
-            FieldCount++;
+    $(AddButton).click(function () {
+        if(x <= MaxInputs) { //max input box allowed
+            FieldCount++; // incremento de campos agregados
             //agregar campo
-            $(contenedor).append('<div class="form-group"><label for=""><a href="#" class="eliminar">&times;</a></label><input class="form-control" type="text" name="mitexto[]" id="campo_'+ FieldCount +'" placeholder="Texto '+ FieldCount +'"/></div>');
+            $(contenedor).append('<div class="form-group"><div class="input-group"><span class="input-group-btn"><button class="btn btn-default eliminar" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></span><input type="text" class="form-control" name="mitexto[]" id="campo_'+ FieldCount +'" ></div></div>');
             x++; //text box increment
         }
+        
+        if (x == MaxInputs) {
+        	AddButton.removeClass('btn-info')
+        	AddButton.addClass('disabled btn-danger');
+        }
+        	
         return false;
     });
 
     $("body").on("click",".eliminar", function(e){ //click en eliminar campo
-        if( x > 1 ) {
-            debugger;
+        if( x > 0 ) {
+            //debugger;
             //$(this).parent('div').remove(); //eliminar el campo
-            $(this).parent('div').css({
-                "background": "red"
-            });
-            $(this).parent('div').remove(); //eliminar el campo
+            $(this).parents('div .form-group').remove();
+            AddButton.removeClass('disabled btn-danger');
+            AddButton.addClass('btn-info');
             x--;
         }
         return false;

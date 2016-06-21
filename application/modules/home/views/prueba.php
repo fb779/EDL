@@ -57,7 +57,7 @@
 							</div>
 
 							<div class="form-group col-xs-12 col-sm-3 ">
-								<label># Incripción/Matrícula</label>
+								<label># Incripción/MatrÃ­cula</label>
 								<input type="text" class="form-control" placeholder="" name="REGCAM" id="REGCAM" required>
 							</div>
 						</div>
@@ -216,24 +216,29 @@
 						</div>
 
 						<div class="row">
-							<div class="form-group col-xs-12 col-sm-3 ">
+							<div class="form-group col-xs-12 col-sm-4 ">
 								<label>23. Tipo de organizaión</label>
-								<input type="text" id="ORGJUR" class="form-control" name="ORGJUR">
+								<select id="ORGJUR" class="form-control" name="ORGJUR">
+									<option value=""> -Seleccione- </option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
 							</div>
-							
-							<div class="text-center col-xs-12 col-sm-3 ">
-								<label for="">23. Fecha de constitución</label>
-								<input type="time" class="form-control" placeholder="Ej: AAAA-MM-DD 1998-11-22" readonly>
+							<div class="form-group col-xs-12 col-sm-4 ">
+								<label for="">Cual?</label>
+								<input type="text" id="ORJUDF" class="form-control" name="ORJUDF" placeholder="Cual?"> 
+							</div>
+							<div class="text-center col-xs-12 col-sm-4 ">
+								<label for="">24. Fecha de constitución</label>
+							</div>
+							<div class="form-group col-xs-12 col-sm-2 col-sm-offset-0 ">
+								<input type="time" id="FECHADES" class="form-control" name="FECHADES" placeholder="Desde">
+							</div>
+							<div class="form-group col-xs-12 col-sm-2 ">
 								
-	
-							</div>
-							<div class="form-group col-xs-12 col-sm-3 ">
-								<label>Desde</label>
-								<input type="time" id="FECHADES" class="form-control" name="FECHADES"  >
-							</div>
-							<div class="form-group col-xs-12 col-sm-3 ">
-								<label>Hasta</label>
-								<input type="time" id="FECHAHASTA" class="form-control" name="FECHAHASTA"  >
+								<input type="time" id="FECHAHASTA" class="form-control" name="FECHAHASTA" placeholder="Hasta"> 
 							</div>
 						</div>
 						
@@ -268,7 +273,14 @@
 						<div class="row">
 							<div class="form-group col-xs-12  ">
 								<label for="">26. Estado actual</label>
-								<input type="time" id="ESTAC" class="form-control" name="ESTAC"  >
+								<select id="ESTAC" class="form-control" name="ESTAC">
+									<option value=""> -Seleccione- </option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+								
 							</div>
 						</div>
 						<div class="row">
@@ -293,7 +305,7 @@
 								<input type="time" id="IDWEB" class="form-control" name="IDWEB"  >
 							</div>
 							<div class="form-group col-xs-12 col-sm-2 ">
-								<label for="">Servicios Públicos</label>
+								<label for="">Servicios PÃºblicos</label>
 								<input type="time" id="IDWEB" class="form-control" name="IDWEB"  >
 							</div>
 							<div class="form-group col-xs-12 col-sm-2 ">
@@ -340,12 +352,14 @@
 							<div class="col-xs-12 col-sm-3">
 								<a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo</a>
 							</div>
-							<div id="contenedor" class="col-xs-12 col-sm-9 ">
-								<div class="form-group added">
-									<input class="form-control" type="text" name="mitexto[]" id="campo_0" placeholder="Texto 1"/><a href="#" class="eliminar">&times;</a>
-								</div>
+						</div>
+						<div class="row">
+							<div id="contenedor" class="col-xs-12 col-sm-12 ">
+								<!--div class="form-group added">
+									<input class="form-control" type="text" name="mitexto[]" id="campo_0" placeholder="Texto 1"/><a href="#" class="eliminar">X</a>
+								</div-->
 
-
+								<!--div id="campo_0" class="form-group added">
 								<div class="input-group">
 									<span class="input-group-btn">
 										<button class="btn btn-default eliminar" type="button">
@@ -353,7 +367,8 @@
 										</button>
 									</span>
 									<input type="text" class="form-control" placeholder="Search for...">
-								</div><!-- /input-group -->
+								</div>
+								</div-->
 
 							</div>
 						</div>
