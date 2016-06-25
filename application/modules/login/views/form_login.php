@@ -40,7 +40,9 @@
 	
 	<div class="form-gorup text-center">
 		<div class="col-md-3 col-xs-offset-3">
+		<?php if ($calendario_g != ''){ ?>
 		{calendario_g}
+		<?php } ?>
 		</div>
 	</div>
 	

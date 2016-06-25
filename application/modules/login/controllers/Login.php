@@ -12,7 +12,8 @@ class Login extends MX_Controller {
 			'static' => BASE_STATICS,
 			'title' => TITULO_ENCUESTA
 		);
-		//$this->datos['footer'] = array();
+		$this->datos['footer'] = array('static' => BASE_STATICS);
+		
 	}
 	
 	public function index()
@@ -28,6 +29,7 @@ class Login extends MX_Controller {
 		$this->datos['dt'] = array(
 			'form_identificar' => form_open('login/identificar'),
 			'calendario_g' => $this->calendar->generate(),
+			'calendario_g' => '',
 			'parrafo' => 'Parrafo de verificacion para la carga de contenido de la pagina..... ',
 		);
 
