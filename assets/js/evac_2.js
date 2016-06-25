@@ -1,38 +1,33 @@
 $(document).ready(function() {
 	
-    var MaxInputs       = 10; //Número Maximo de Campos
-    var contenedor       = $("#contenedor"); //ID del contenedor
-    var AddButton       = $("#agregarCampo"); //ID del Botón Agregar
-
-    //var x = número de campos existentes en el contenedor
-    var x = $("#contenedor div").length;
-    var FieldCount = x; //para el seguimiento de los campos
-
-    $(AddButton).click(function () {
-        if(x <= MaxInputs) { //max input box allowed
-            FieldCount++; // incremento de campos agregados
-            //agregar campo
-            $(contenedor).append('<div class="form-group"><div class="input-group"><span class="input-group-btn"><button class="btn btn-default eliminar" type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></span><input type="text" class="form-control" name="mitexto[]" id="campo_'+ FieldCount +'" ></div></div>');
-            x++; //text box increment
-        }
-        
-        if (x == MaxInputs) {
-        	AddButton.removeClass('btn-info')
-        	AddButton.addClass('disabled btn-danger');
-        }
-        	
-        return false;
-    });
-
-    $("body").on("click",".eliminar", function(e){ //click en eliminar campo
-        if( x > 0 ) {
-            //debugger;
-            //$(this).parent('div').remove(); //eliminar el campo
-            $(this).parents('div .form-group').remove();
-            AddButton.removeClass('disabled btn-danger');
-            AddButton.addClass('btn-info');
-            x--;
-        }
-        return false;
-    });
+    var contenedor	= $("#contenedor"); //ID del contenedor
+    var actividad	= $("#listActivi"); // ID div.body modal 
+    
+    //interaccion para agregar el div de la acividad del modal a la pagina
+    $(actividad).on("click", ".addAct", function(e) {
+		$(this).children().children().children().children().removeClass("glyphicon-plus");
+		$(this).children().children().children().children().addClass("glyphicon-remove");
+		$(this).removeClass("addAct"); // agregar clase eliminar al div.
+		$(this).addClass("eliminar"); // agregar clase eliminar al div.
+    	$(contenedor).append($(this));
+    	
+		
+//		var item = $(this).clone();
+//		$(item).children().children().children().children().removeClass("glyphicon-plus");
+//		$(item).children().children().children().children().addClass("glyphicon-remove");
+//		$(item).removeClass("addAct"); // agregar clase eliminar al div.
+//		$(item).addClass("eliminar"); // agregar clase eliminar al div.
+//		$(contenedor).append($(item)); // clona el elemento para agregarlo al listado
+	});
+    
+    // interaccion para remover el item de el listado de la pagina y regresarlo al modal
+    $(contenedor).on("click", ".eliminar", function(e) {
+		$(this).children().children().children().children().removeClass("glyphicon-remove");
+		$(this).children().children().children().children().addClass("glyphicon-plus");
+		$(this).removeClass("eliminar"); // agregar clase eliminar al div.
+		$(this).addClass("addAct"); // agregar clase eliminar al div.
+    	$(actividad).append($(this));
+    	
+    	//$(this).remove();
+	});    
 });
