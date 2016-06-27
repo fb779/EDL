@@ -1,3 +1,4 @@
+
 <!-- Fin Contenido de la pagina -->
 <div id="contenido" class="container">
 	<div class="row">
@@ -5,7 +6,7 @@
 			<form action="" method="POST">
 				<div class="tab-content">
 					<!-- formulario Caratula Unica -->
-					<div class="tab-pane active" id="caratula-unica">
+					<div class="tab-pane" id="caratula-unica">
 						<div class="row text-center">
 							<div class="col-xs-12  ">
 								<h2>Caratula Unica</h2>
@@ -367,7 +368,7 @@
 								<a id="agregarCampo" class="btn btn-info" href="#">Agregar Campo</a>
 							</div-->
 							<div class="col-xs-12 col-sm-3">
-								<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
 							</div>
 						</div>
 						<!-- Modal -->
@@ -490,9 +491,16 @@
 					<!-- Fin formulario Caratula Unica -->
 
 					<!-- Fin formulario Caracterizacion de vacantes -->
-					<div class="tab-pane" id="modulo-1">
-						<h3 class="">Notice the gap between the content and tab after
-							applying a background color</h3>
+					<div class="tab-pane active" id="modulo-1">
+						<div class="row text-center">
+							<h2>Modlo 1</h2>
+							<h3>Caracterizacion de vacantes</h3>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<label for="">Este módulo  determina la cantidad de vacantes durante el "I trimestre del año 2016" e  identifica sus características.</label>
+							</div>
+						</div>
 						<div class="row">
 							<div class="form-group col-xs-12 col-sm-6 ">
 								<label class="">Email</label> <input type="email"
@@ -505,6 +513,7 @@
 									name="telefono" id="telefono" ng-model="usPhone" required>
 							</div>
 						</div>
+						
 					</div>
 					<!-- Fin formulario Caracterizacion de vacantes -->
 					<div class="tap-panel" id="boton">

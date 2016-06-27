@@ -19,8 +19,8 @@ class Home extends MX_Controller {
 
 		$this->datos['menu'] = array(
 			'navigate' => array(	
-				array('link' => anchor('#caratula-unica', 'Caratula Unica', $this->attrNavbar), 'active' => 'active'),
-				array('link' => anchor('#modulo-1', 'Modulo 1', $this->attrNavbar), 'active' => ''),
+				array('link' => anchor('#caratula-unica', 'Caratula Unica', $this->attrNavbar), 'active' => ''),
+				array('link' => anchor('#modulo-1', 'Modulo 1', $this->attrNavbar), 'active' => 'active'),
 				//array('link' => anchor('#messages', 'Messages', $this->attrNavbar), 'active' => ''),
 				//array('link' => 'Usuarios', 'direc' => 'home'),
 			),	
