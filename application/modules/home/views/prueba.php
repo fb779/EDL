@@ -383,40 +383,40 @@
 										<h4 class="modal-title" id="myModalLabel">Modal title</h4>
 									</div>
 									<div id="listActivi" class="modal-body">
-										<div class="form-group addAct">
+										<div class="form-group ">
 											<div class="input-group ">
 												<span class="input-group-btn">
-													<button class="btn btn-default botonera" type="button">
+													<button class="btn btn-default botonera addAct" type="button">
 														<span class="icono glyphicon glyphicon-plus" aria-hidden="true"></span>
 													</button>
 												</span> <input type="text" class="form-control" id="2233" name="" value="2233 - XXXXXXXX" disabled>
 											</div>
 										</div>
 										
-										<div class="form-group addAct">
+										<div class="form-group ">
 											<div class="input-group ">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button">
+													<button class="btn btn-default addAct" type="button">
 														<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 													</button>
 												</span> <input type="text" class="form-control" id="3344" name="" value="3344 - XXXXXXXX" disabled>
 											</div>
 										</div>
 										
-										<div class="form-group addAct">
+										<div class="form-group ">
 											<div class="input-group ">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button">
+													<button class="btn btn-default addAct" type="button">
 														<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 													</button>
 												</span> <input type="text" class="form-control" id="4455" name="" value="4455 - XXXXXXXX" disabled>
 											</div>
 										</div>
 										
-										<div class="form-group addAct">
+										<div class="form-group ">
 											<div class="input-group ">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button">
+													<button class="btn btn-default addAct" type="button">
 														<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 													</button>
 												</span> <input type="text" class="form-control" id="5566" name="" value="5566 - XXXXXXXX" disabled>
@@ -502,15 +502,53 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="form-group col-xs-12 col-sm-6 ">
-								<label class="">Email</label> <input type="email"
-									class="form-control col-xs-12 col-sm-3 " placeholder="Email"
-									name="correo" id="correo" ng-model="usEmail" required>
+							<div class="form-group col-xs-12 col-sm-2">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Actividades Economicas</button>
 							</div>
-							<div class="form-group col-xs-12 col-sm-6 ">
-								<label class="">Telefono</label> <input type="tel"
-									class="form-control col-xs-12 col-sm-3 " placeholder="Telefono"
-									name="telefono" id="telefono" ng-model="usPhone" required>
+							<div class="col-xs-12 col-sm-1">
+								<button id="removeDisp" type="button" class="btn btn-danger" aria-label="Left Align">
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</button>
+							</div>
+							<div class="form-group col-xs-12 col-sm-6">
+							    <div class="input-group">
+							    	<span class="input-group-btn">
+								    	<button id="addDisp" type="button" class="btn btn-default" aria-label="Left Align">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+      								</span>
+      								<input type="text" id="tituloDisp" class="form-control" placeholder="Search for...">
+    							</div>
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<ul class="nav nav-tabs" id="listDisTab">
+									<!--li class="active"><a href="#dis1" data-toggle="tab"> Disp 1</a></li>
+									<li><a href="#dis2" data-toggle="tab"> Disp 2</a></li>
+									<li><a href="#dis3" data-toggle="tab">Messages</a></li>
+									<li><a href="#dis4" data-toggle="tab">Settings</a></li-->
+								</ul>
+								<p>
+								<div id="listDisForm" class="tab-content">
+								
+								</div>
+								</p>
+							</div>
+							<div id="disTotales" class="col-xs-12">
+								<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+									<label class="">Total Vacantes</label>
+									<div class='small'>
+										<input type='text' class='form-control input-sm text-right' id='idi1r2ctv' name='i1r2ctv' value = "<?php //echo $row['i1r2ctv']?>"  />
+									</div>
+								</div>
+								<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+									<label class="">Total Vacantes Cubiertas</label>
+									<div class='small'>
+										<input type='text' class='form-control input-sm text-right' id='idi1r2ctvc' name='i1r2ctvc' value = "<?php //echo $row['i1r2ctvc']?>" />
+									</div>
+								</div>
 							</div>
 						</div>
 						
@@ -529,6 +567,224 @@
 		</div>
 	</div>
 </div>
+
+
+<div id="caracterizacion" class="hidden">
+	<div class="container-fluid">		
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Cantidad de vacantes abiertas</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['d1r2c1']?>" maxlength="9" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">&Aacute;rea funcional</label>
+			<div class='small'>
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0"> Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Área de dirección general</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Área de administración</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >Área de mercadeo/ventas</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >Área de producción</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >Área de contabilidad y finanzas</option>
+					<option value="6" <?php //echo ($row['i1r2c'] == 6) ? 'checked' : '';  ?> >Personal de Investigación y desarrollo</option>
+					<option value="7" <?php //echo ($row['i1r2c'] == 7) ? 'checked' : '';  ?> >Personal de apoyo</option>
+				</select>								
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Mínimo nivel educativo requerido</label>
+			<div class='small'>
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0" > Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >No bachiller</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Educación básica secundaria (6° - 9°)</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >Educación media   (10° - 13°)</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >Técnico laboral</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >Técnico profesional</option>
+					<option value="6" <?php //echo ($row['i1r2c'] == 6) ? 'checked' : '';  ?> >Tecnológo</option>
+					<option value="7" <?php //echo ($row['i1r2c'] == 7) ? 'checked' : '';  ?> >Estudiante universitario</option>
+					<option value="8" <?php //echo ($row['i1r2c'] == 8) ? 'checked' : '';  ?> >Profesional universitario</option>
+					<option value="9" <?php //echo ($row['i1r2c'] == 9) ? 'checked' : '';  ?> >Especialización </option>
+					<option value="10" <?php //echo ($row['i1r2c'] == 10) ? 'checked' : '';  ?> >Maestría</option>
+					<option value="11" <?php //echo ($row['i1r2c'] == 11) ? 'checked' : '';  ?> >Doctorado</option>
+					<option value="12" <?php //echo ($row['i1r2c'] == 12) ? 'checked' : '';  ?> >No requiere estudios</option>
+				</select>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="container-fluid">
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Área de Formación</label>
+			<div class='small'>
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0" > Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Economía, Administración y Contaduría</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Ingeniería, Arquitectura Urbanismo y afines</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >Ciencias Sociales y humanas</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >Ciencias de la educación</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >Ciencias de la salud</option>
+					<option value="6" <?php //echo ($row['i1r2c'] == 6) ? 'checked' : '';  ?> >Bellas artes</option>
+					<option value="7" <?php //echo ($row['i1r2c'] == 7) ? 'checked' : '';  ?> >Agronomía, Veterinaria</option>
+					<option value="8" <?php //echo ($row['i1r2c'] == 8) ? 'checked' : '';  ?> >Matemáticas y ciencias naturales</option>
+					<option value="9" <?php //echo ($row['i1r2c'] == 9) ? 'checked' : '';  ?> >No aplica</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Experiencia en meses</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Modalidad de Contratación</label>
+			<div class='small'>
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0" > Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Término Indefinido</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Término  Fijo</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >Prestación de servicios</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >Por  obra  o  labor  contratada</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >Ocasional ó Transitorio</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Salario u honorarios mensuales</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">Edad</label>
+			<div class='small'>
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0" > Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >15 - 20</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >20 - 25</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >25 - 30</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >30 - 35</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >35 - 40</option>
+					<option value="6" <?php //echo ($row['i1r2c'] == 6) ? 'checked' : '';  ?> >40 - 45</option>
+					<option value="7" <?php //echo ($row['i1r2c'] == 7) ? 'checked' : '';  ?> >45 - 50</option>
+					<option value="8" <?php //echo ($row['i1r2c'] == 8) ? 'checked' : '';  ?> >50 - 55</option>
+					<option value="9" <?php //echo ($row['i1r2c'] == 9) ? 'checked' : '';  ?> >55 - 60</option>
+					<option value="10" <?php //echo ($row['i1r2c'] == 10) ? 'checked' : '';  ?> >60 - 65</option>
+					<option value="11" <?php //echo ($row['i1r2c'] == 11) ? 'checked' : '';  ?> >65 - 70</option>
+					<option value="12" <?php //echo ($row['i1r2c'] == 12) ? 'checked' : '';  ?> >70 - 75</option>
+					<option value="13" <?php //echo ($row['i1r2c'] == 13) ? 'checked' : '';  ?> >75 - 80</option>
+					<option value="14" <?php //echo ($row['i1r2c'] == 14) ? 'checked' : '';  ?> >80 - 85</option>
+					<option value="15" <?php //echo ($row['i1r2c'] == 15) ? 'checked' : '';  ?> >85 - 90</option>
+					<option value="16" <?php //echo ($row['i1r2c'] == 16) ? 'checked' : '';  ?> >Indiferente</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">De las vacantes ¿Cuántas logró cubrir?</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">De las vacantes cubiertas ¿cuantas se ocuparon con hombres?</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">De las vacantes cubiertas ¿Cuántas se ocuparon con mujeres?</label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label class="">De las vacantes ¿Cuántas NO logró cubrir? </label>
+			<div class='small'>
+				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="container-fluid">
+		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+			<label>De las vacantes NO cubiertas ¿Cuáles fueron las causas?</label>
+			<div class="small">
+				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+					<option value="0" > Seleccione una opción</option>
+					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >La remuneración ofrecida era insuficiente</option>
+					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Postulantes sub-calificados</option>
+					<option value="3" <?php //echo ($row['i1r2c'] == 3) ? 'checked' : '';  ?> >Postulantes sobre-calificados</option>
+					<option value="4" <?php //echo ($row['i1r2c'] == 4) ? 'checked' : '';  ?> >Falta de experiencia o conocimiento específico</option>
+					<option value="5" <?php //echo ($row['i1r2c'] == 5) ? 'checked' : '';  ?> >Los postulantes no dominaban otros idiomas</option>
+					<option value="6" <?php //echo ($row['i1r2c'] == 6) ? 'checked' : '';  ?> >Pocos postulantes</option>
+					<option value="7" <?php //echo ($row['i1r2c'] == 7) ? 'checked' : '';  ?> >Otra</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-1"></div>
+		<div class="form-group form-group-sm col-xs-12 col-sm-7">
+			<label class="">Cual?</label>
+			<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div id="listActividad" class="modal-body">
+				<!-- Listado de actividades consultadas -->
+				<?php foreach ( $qlisActi as $lsAct ) { ?>
+				<div class="form-group">
+					<div class="input-group ">
+						<span class="input-group-btn">
+							<button class="btn btn-default addAct" type="button">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</span> <input type="text" class="form-control"
+							id="<?php echo $lsAct['CODIGO']; ?>" name="<?php echo $lsAct['CODIGO']; ?>"
+							value="<?php echo $lsAct['CODIGO'] . ' - ' . $lsAct['DESCRIP']; ?>"
+							readonly>
+					</div>
+				</div>
+				<?php } ?>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+
 <!-- Fin Contenido de la pagina -->
 
 
