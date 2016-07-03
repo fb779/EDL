@@ -502,14 +502,9 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="form-group col-xs-12 col-sm-2">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Actividades Economicas</button>
-							</div>
-							<div class="col-xs-12 col-sm-1">
-								<button id="removeDisp" type="button" class="btn btn-danger" aria-label="Left Align">
-									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-								</button>
-							</div>
+							<!--div class="form-group col-xs-12 col-sm-2">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Lanzar modal</button>
+							</div-->
 							<div class="form-group col-xs-12 col-sm-6">
 							    <div class="input-group">
 							    	<span class="input-group-btn">
@@ -520,20 +515,20 @@
       								<input type="text" id="tituloDisp" class="form-control" placeholder="Search for...">
     							</div>
 							</div>
+							<div class="col-xs-12 col-sm-1">
+								<button id="removeDisp" type="button" class="btn btn-danger" aria-label="Left Align">
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</button>
+							</div>
 							
 						</div>
 						<div class="row">
 							<div class="col-xs-12">
 								<ul class="nav nav-tabs" id="listDisTab">
-									<!--li class="active"><a href="#dis1" data-toggle="tab"> Disp 1</a></li>
-									<li><a href="#dis2" data-toggle="tab"> Disp 2</a></li>
-									<li><a href="#dis3" data-toggle="tab">Messages</a></li>
-									<li><a href="#dis4" data-toggle="tab">Settings</a></li-->
+									<!--li class="active"><a href="#dis1" data-toggle="tab"> Disp 1</a></li-->
 								</ul>
 								<p>
-								<div id="listDisForm" class="tab-content">
-								
-								</div>
+									<div id="listDisForm" class="tab-content"> </div>
 								</p>
 							</div>
 							<div id="disTotales" class="col-xs-12">
@@ -543,13 +538,19 @@
 										<input type='text' class='form-control input-sm text-right' id='idi1r2ctv' name='i1r2ctv' value = "<?php //echo $row['i1r2ctv']?>"  />
 									</div>
 								</div>
-								<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
+								<div class="form-group form-group-sm col-xs-12 col-sm-3">
 									<label class="">Total Vacantes Cubiertas</label>
 									<div class='small'>
 										<input type='text' class='form-control input-sm text-right' id='idi1r2ctvc' name='i1r2ctvc' value = "<?php //echo $row['i1r2ctvc']?>" />
 									</div>
 								</div>
+								<div class="col-xs-12 col-sm-1">
+									<button id="calcTotalDisp" type="button" class="btn btn-success" >
+										<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+									</button>
+								</div>
 							</div>
+							
 						</div>
 						
 					</div>
@@ -568,7 +569,7 @@
 	</div>
 </div>
 
-
+<!-- Contenedor de la caracterizacion -->
 <div id="caracterizacion" class="hidden">
 	<div class="container-fluid">		
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
@@ -746,6 +747,7 @@
 		</div>
 	</div>
 </div>
+<!-- Contenedor de la caracterizacion -->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"

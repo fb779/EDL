@@ -16,7 +16,7 @@ class Home extends MX_Controller {
 			'static' => BASE_STATICS,
 			'title' => TITULO_ENCUESTA
 		);
-
+		
 		$this->datos['menu'] = array(
 			'navigate' => array(	
 				array('link' => anchor('#caratula-unica', 'Caratula Unica', $this->attrNavbar), 'active' => ''),
@@ -29,9 +29,7 @@ class Home extends MX_Controller {
 		$this->datos['footer'] = array('static' => BASE_STATICS,);
 	}
 	
-	public function index()
-	{
-				
+	public function index() {
 		$this->datos['template'] =  'prueba';
 		$this->datos['dt'] = array(
 			'url_login' => BASE_URL . 'login',
@@ -39,5 +37,9 @@ class Home extends MX_Controller {
 		);
 
 		$this->parser->parse('loadTemplates', $this->datos);
+	}
+	
+	public function load_div() {
+		$this->load->view('div');
 	}
 }

@@ -22,7 +22,6 @@ class Login extends MX_Controller {
 				'calendario_g' => '',
 				'parrafo' => 'Parrafo de verificacion para la carga de contenido de la pagina..... ' 
 		);
-		
 		$this->parser->parse ( 'loadTemplates', $this->datos );
 	}
 	
