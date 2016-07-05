@@ -506,14 +506,17 @@
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Lanzar modal</button>
 							</div-->
 							<div class="form-group col-xs-12 col-sm-6">
-							    <div class="input-group">
+								<button id="addDisp" type="button" class="btn btn-default" aria-label="Left Align">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+							    <!--div class="input-group">
 							    	<span class="input-group-btn">
 								    	<button id="addDisp" type="button" class="btn btn-default" aria-label="Left Align">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
       								</span>
-      								<input type="text" id="tituloDisp" class="form-control" placeholder="Search for...">
-    							</div>
+      								<!--input type="text" id="tituloDisp" class="form-control" placeholder="Search for..."->
+    							</div-->
 							</div>
 							<div class="col-xs-12 col-sm-1">
 								<button id="removeDisp" type="button" class="btn btn-danger" aria-label="Left Align">
@@ -576,14 +579,14 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Cantidad de vacantes abiertas</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['d1r2c1']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['d1r2c1']?>" maxlength="9" />
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">&Aacute;rea funcional</label>
 			<div class='small'>
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0"> Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Área de dirección general</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Área de administración</option>
@@ -599,7 +602,7 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Mínimo nivel educativo requerido</label>
 			<div class='small'>
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0" > Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >No bachiller</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Educación básica secundaria (6° - 9°)</option>
@@ -623,7 +626,7 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Área de Formación</label>
 			<div class='small'>
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0" > Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Economía, Administración y Contaduría</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Ingeniería, Arquitectura Urbanismo y afines</option>
@@ -641,14 +644,14 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Experiencia en meses</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Modalidad de Contratación</label>
 			<div class='small'>
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0" > Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >Término Indefinido</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Término  Fijo</option>
@@ -664,14 +667,14 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Salario u honorarios mensuales</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">Edad</label>
 			<div class='small'>
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0" > Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >15 - 20</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >20 - 25</option>
@@ -696,7 +699,7 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">De las vacantes ¿Cuántas logró cubrir?</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 	</div>
@@ -705,21 +708,21 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">De las vacantes cubiertas ¿cuantas se ocuparon con hombres?</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">De las vacantes cubiertas ¿Cuántas se ocuparon con mujeres?</label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label class="">De las vacantes ¿Cuántas NO logró cubrir? </label>
 			<div class='small'>
-				<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+				<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 			</div>
 		</div>
 		
@@ -729,7 +732,7 @@
 		<div class="form-group form-group-sm col-xs-12 col-sm-3 ">
 			<label>De las vacantes NO cubiertas ¿Cuáles fueron las causas?</label>
 			<div class="small">
-				<select class='form-control input-sm' id="idi1r2c" name="i1r2c">
+				<select class='form-control input-sm' id="" name="i1r2c">
 					<option value="0" > Seleccione una opción</option>
 					<option value="1" <?php //echo ($row['i1r2c'] == 1) ? 'checked' : '';  ?> >La remuneración ofrecida era insuficiente</option>
 					<option value="2" <?php //echo ($row['i1r2c'] == 2) ? 'checked' : '';  ?> >Postulantes sub-calificados</option>
@@ -744,7 +747,7 @@
 		<div class="col-xs-12 col-sm-1"></div>
 		<div class="form-group form-group-sm col-xs-12 col-sm-7">
 			<label class="">Cual?</label>
-			<input type='text' class='form-control input-sm text-right' id='idi1r2c' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
+			<input type='text' class='form-control input-sm text-right' id='' name='i1r2c' value = "<?php //echo $row['i1r2c']?>" maxlength="9" />
 		</div>
 	</div>
 </div>
