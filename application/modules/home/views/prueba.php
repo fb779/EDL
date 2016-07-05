@@ -3,7 +3,7 @@
 <div id="contenido" class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 ">
-			<form action="" method="POST">
+			<!--form action="" method="POST"-->
 				<div class="tab-content">
 					<!-- formulario Caratula Unica -->
 					<div class="tab-pane" id="caratula-unica">
@@ -528,7 +528,9 @@
 									<!--li class="active"><a href="#dis1" data-toggle="tab"> Disp 1</a></li-->
 								</ul>
 								<p>
+									<form id="disForm" action="">
 									<div id="listDisForm" class="tab-content"> </div>
+									</form>
 								</p>
 							</div>
 							<div id="disTotales" class="col-xs-12">
@@ -558,13 +560,12 @@
 					<div class="tap-panel" id="boton">
 						<div class="row">
 							<div class="form-group col-xs-12 text-right ">
-								<input type="submit" class="btn btn-primary" value="Guardar"
-									name="direccion" id="direccion">
+								<input type="submit" class="btn btn-primary" value="Guardar" name="direccion" id="direccion">
 							</div>
 						</div>
 					</div>
 				</div>
-			</form>
+			<!--/form-->
 		</div>
 	</div>
 </div>

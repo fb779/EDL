@@ -53,7 +53,7 @@ $(document).ready(function() {
     
     $('#addDisp').click(function(){
     	var x = lista.children().length + 1;
-    	var vinculo = '<li><a href="#disp'+ x +'" data-toggle="tab">Disp '+ x +'</a></li>'
+    	var vinculo = '<li class="'+ ((x==1)?'active':'') +'"><a href="#disp'+ x +'" data-toggle="tab">Disp '+ x +'</a></li>'
     	var panel = '<div class="tab-pane '+ ((x==1)?'active':'') +'" id="disp'+x+'"><div class="col-xs-12"> <h3> '+ $('#tituloDisp').val() +' </h3> </div> </div>';
     	
     	conte.append(panel)
@@ -104,11 +104,17 @@ $(document).ready(function() {
     	});
     });	
 	
-    $('#listDisForm input').change(function(){
-    	debugger;
-    	console.log($(this).val());
-    });
-	
+//    $('form :input').on('change',function(){
+//    	debugger;
+//    });
+//    
+//    $('#listDisForm').on('').change(function(){
+//    	debugger;
+//    	console.log($(this).val());
+//    });
+    $('#disForm :input').on('submit', function() {
+    	  debugger; // Does some stuff and logs the event to the console
+    	});
 });
 
 
