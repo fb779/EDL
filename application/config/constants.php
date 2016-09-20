@@ -84,7 +84,7 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-// Base URL 
+// Base URL
 if (isset($_SERVER['HTTP_HOST'])) {
 	$base_url = 'http'
 			. '://' . $_SERVER['HTTP_HOST']
@@ -105,7 +105,6 @@ define('BASE_URI', $base_uri);
 define('APPPATH_URI', BASE_URI . APPPATH);
 define('BASE_STATICS', BASE_URL . 'assets/');
 define('TITULO_ENCUESTA', 'ENCUESTA DE DISPONIBILIDAD LABORAL');
-
 
 unset($base_url, $base_uri);
 

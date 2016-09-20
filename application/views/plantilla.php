@@ -5,7 +5,7 @@
 	<!--link rel="stylesheet" type="text/css" href="css/normalizer.css"-->
 	<link rel="stylesheet" type="text/css" href="{static}css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{static}css/styles.css">
-	
+
 
 	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script-->
 	<script src="{static}js/bootstrap.min.js" type="text/javascript"></script>
@@ -32,7 +32,7 @@
 		</div>
 		<div class="ap_line row"></div>
 		<div id="naigation" class="row">
-			
+
 			<section>
 				<ul class="nav nav-tabs nav-justified">
 					<li id="item1" role="presentation" class="active"><a href="#">item_1</a></li>
@@ -46,7 +46,7 @@
 		</div>
 
 		<div id="content" class="row"></div>
-		
+
 		<div id="footer" class="row">
 			<section class="ap_footer ap_footer_text col-md-9 text-center">
 				<p>

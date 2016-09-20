@@ -370,7 +370,7 @@ $config['encryption_key'] = '3DL_C0D31gN1T3R';
 |
 |
 | * Estructure the table from ci_sessionss
-|
+|  Estructure from sqlite3
 |	CREATE TABLE `ci_sessions` (
 |		`id`	TEXT NOT NULL UNIQUE,
 |		`ip_address`	TEXT NOT NULL,
@@ -378,6 +378,14 @@ $config['encryption_key'] = '3DL_C0D31gN1T3R';
 |		`data`	BLOB NOT NULL,
 |		PRIMARY KEY(id)
 |	);
+|  Estruscture from Mysql
+|   CREATE TABLE IF NOT EXISTS `ci_sessions` (
+|       `id` varchar(40) NOT NULL,
+|       `ip_address` varchar(45) NOT NULL,
+|       `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+|       `data` blob NOT NULL,
+|       KEY `ci_sessions_timestamp` (`timestamp`)
+|   );
 |
 */
 $config['sess_driver'] = 'database';

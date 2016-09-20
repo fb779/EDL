@@ -3,9 +3,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{titulo}</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="{staticos}css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{staticos}css/styles.css">	
+	<link rel="stylesheet" type="text/css" href="{staticos}css/styles.css">
 </head>
 
 <body-->
@@ -20,10 +20,10 @@
 	if (isset($menu)){
 		$this->parser->parse("templates/navigation.php", $menu);
 	}
-	
+
 	if (isset($template)){
 		$this->parser->parse($template, $dt);
-	} 
+	}
 
 	if (isset($footer)){
 		$this->parser->parse("templates/footer.php", $footer);
